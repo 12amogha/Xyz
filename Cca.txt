@@ -1,0 +1,99 @@
+1)Control System Command to Clone, Commit, Push, Fetch, Pull, Checkout, Reset and Delete
+
+-	git config â€“global user.name â€œ12amoghaâ€
+-	git  config â€“global user.email â€œ12amogha@gmail.comâ€
+
+-	git clone <repository-url> 
+
+-	git add <file> # to add a specific file
+  git add .      # to add all changes
+
+-	git commit -m "Your commit message"
+
+-	git push origin <branch-name>
+-	git push origin main
+ 
+-	git fetch origin
+
+
+-	git pull origin <branch-name>
+-	git pull origin main
+
+-	git checkout -b <branch-name>
+-	git checkout -b feature-branch
+
+-	To reset the working directory to the last commit:
+-	git reset â€“hard
+
+-	To delete a local branch:
+-	git branch -d <branch-name>
+
+--------------------------------------------------------------------------------
+
+2)Install Virtual Box/VMware Workstation. Install a C compiler in the virtual machine and execute a sample program
+
+-Search for Virtual Box Techspot on Google chrome: download for windows
+-Install the file
+-Once the virtual box opens , click on new ->Give a name
+-Give base memory : 6200MB , Processor : 3
+-Select : use existing virtual memory file hard disk space->finish
+-Goto settings-> display side panel -> goto video memory: 90 ,monitor count : 3,  scale factor : 150% , Enable 3D Acceleration : check the box
+-Virtual box created , open terminal , and execute the following : 
+- sudo apt update
+- sudo apt install build-essential
+- gcc --version
+- gedit sample.c
+
+- In sample.c:
+#include<stdio.h>
+void main()
+{
+printf("Hello World \n");
+}
+
+- gcc sample.c -o output
+- ./output
+
+
+-----------------------------------------------------------------------------
+
+3)Install Google App Engine. Hosting a static website on Google App Engine
+
+- Goto console.cloud.google.com
+- Click on cloud overview, select dashboard
+- Create a new project
+- Search for Admin API
+- Select AppEngine Admin API
+- Enable the API
+- Install Google Cloud SDK : CLI
+- In Google cloud SDK Shell :
+- gcloud projects list
+- gcloud config set project <project_id>
+- git clone <url>
+- cd <repo name>
+- python <filename>.py
+
+- app.py :
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World! This is my static website.'
+
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port=8080)
+
+---------------------------------------------------------------------------
+
+4) Simulate a cloud scenario using cloudsim and run a scheduling algorithm that is not present in cloudsim.
+
+Download all required jar files from java2s commons math 3-3.6.1 jar , then download cloudsim 3.0.3 zip file from GitHub (from releases) then download eclipse ide from eclipse org,  In eclipse - go to file - new - Java project - give project name as FcfsScheduler - browse from the location - set cloudsim as the folder -next - finish. Then go to the folder Fcfsscheduler - then go to src -  new package - name it as fcfs - then inside fcfs folders drag and drop all source files of fcfs - reload project - package names of all files should be similar
+Click on project name - right click - run as Java application
+Then,
+Run fcfschedulerfile.Java only
+
+
+
+-------------------------------------------------------------------------------------
