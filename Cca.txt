@@ -1,12 +1,12 @@
 1)Control System Command to Clone, Commit, Push, Fetch, Pull, Checkout, Reset and Delete
 
--	git config â€“global user.name â€œ12amoghaâ€
--	git  config â€“global user.email â€œ12amogha@gmail.comâ€
+-	git config –-global user.name “12amogha”
+-	git  config –-global user.email “12amogha@gmail.com”
 
 -	git clone <repository-url> 
 
 -	git add <file> # to add a specific file
-  git add .      # to add all changes
+        git add .      # to add all changes
 
 -	git commit -m "Your commit message"
 
@@ -23,7 +23,7 @@
 -	git checkout -b feature-branch
 
 -	To reset the working directory to the last commit:
--	git reset â€“hard
+-	git reset –hard
 
 -	To delete a local branch:
 -	git branch -d <branch-name>
