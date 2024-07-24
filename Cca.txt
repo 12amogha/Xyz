@@ -95,5 +95,52 @@ Then,
 Run fcfschedulerfile.Java only
 
 
-
 -------------------------------------------------------------------------------------
+5)Creating an Application in Salesforce.com using Apex Programming language
+
+Goto https://developer.salesforce.com/signup, sign up as a developer ,
+12amogha@bnm
+ 
+-click on settings icon  on top right corner, select developer console
+
+-File->new->apex class->enter name without extension
+-To run : Goto Debug-> Open Execute Anonymous Window-> type : filename.function_name(3);
+-then select logs -> check debug only - for output
+
+
+public class first {
+    public static void demo(integer Key){
+        System.debug('Linear Search');
+        integer s=-1;
+        list <integer> lon = new List<integer>();
+        lon.add(3);
+        lon.add(4);
+        lon.add(5);
+        lon.add(6);
+        System.debug('List:' +lon);
+        for(integer i=0;i<lon.size();i++)
+        {
+            if(key == lon[i]){
+                s=1;
+            }
+        }
+        if(s==1){
+            System.debug('element found');
+        }
+        else{
+            System.debug('element not found');
+        }
+    }
+}
+------------------------------------------------------------------------------------------
+6)Moving  files between virtual machines
+
+-settings of tht vm-> network side bar ->  change network to NAT network
+-up panel tools->Network ->properties->NAT Network tab->Create two NAT Network
+-Goto Ubuntu-> settings->Network->Change to Nat Network , name it as NatNetwork1 or NatNetwork2 
+-Goto tht vm,goto settings-> Shared Folders-> click on add button ( + button right side)->make folder path as other, then create a new folder and select tht folder, tick on automount.
+-Goto Settings-> Network->select the nat network name
+-reboot and start ubuntu
+-In terminal : sudo adduser <user> vboxsf
+
+----------------------------------------------------------------------------------------------
